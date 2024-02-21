@@ -1,1 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smile for Karen</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        header {
+            background-color: #ffcccb;
+            padding: 20px;
+        }
 
+        h1 {
+            color: #333;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+            animation: heartBeat 1s infinite alternate;
+        }
+
+        footer {
+            background-color: #ffcccb;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @keyframes heartBeat {
+            to {
+                transform: scale(1.2);
+            }
+        }
+
+        audio {
+            display: none;
+        }
+
+        .note-container {
+            display: none;
+            margin-top: 20px;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .show-note .note-container {
+            display: block;
+            opacity: 1;
+        }
+
+        .note {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .read-more-button {
+            background-color: #ffcccb;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Smile for Karen</h1>
+    </header>
+
+    <main>
+        <p>Dear Karen,</p>
+        <p>We just want to take a moment to appreciate you and bring a smile to your face. You're amazing, and your presence lights up the room!</p>
+        <img src="https://placekitten.com/800/400" alt="Cute kitten to make you smile">
+        
+        <button class="read-more-button" onclick="showNote()">Read More</button>
+        
+        <div class="note-container" id="noteContainer">
+            <div class="note">
+                <p>My Dearest Karen,
+
+I'm so sorry this Valentine wish is late, but you've been on my mind and heart not just today, but every day. Your smile makes my world brighter. Your laugh fills me with joy. Your beautiful spirit inspires me to be better.
+
+I know life gets busy, but I should have taken the time to let you know just how special you are to me on Valentine's Day. Please accept this small token of my appreciation and know that no matter the day or season, my care and admiration for you will never fade..</p>
+                <p>With love and appreciation,</p>
+                <p>Joash</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Created with ❤️ for Karen</p>
+    </footer>
+
+    <audio controls autoplay loop>
+        <source src="path/to/romantic-music.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        function showNote() {
+            var noteContainer = document.getElementById('noteContainer');
+            noteContainer.classList.toggle('show-note');
+        }
+    </script>
+</body>
+</html>
